@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-06-04T13:03:26.396624" rpa="false" schemaversion="5">
+<suite id="s1" name="shopPage" source="C:\Users\lenovo\PycharmProjects\eCommerceWebAutomation\test\shopPage.robot">
+<test id="s1-t1" name="Validate card display in the shopping page" line="26">
+<kw name="Open the browser with payment url" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-04T13:03:26.855547" level="INFO">Opening browser 'chrome' to base url 'https://rahulshettyacademy.com/loginpagePractise/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-04T13:03:26.855547" elapsed="7.384537"/>
+</kw>
+<status status="PASS" start="2024-06-04T13:03:26.853551" elapsed="7.387530"/>
+</kw>
+<kw name="Fill the login form" owner="landingPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-04T13:03:34.242079" level="INFO">Typing text 'rahulshettyacademy' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-04T13:03:34.242079" elapsed="0.868775"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-06-04T13:03:35.111849" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2024-06-04T13:03:35.212580" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-04T13:03:35.110854" elapsed="0.409211"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-04T13:03:35.521063" level="INFO">Clicking button 'id:signInBtn'.</msg>
+<arg>${sign_in_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-04T13:03:35.521063" elapsed="0.854714"/>
+</kw>
+<arg>${valid_username}</arg>
+<arg>${valid_password}</arg>
+<status status="PASS" start="2024-06-04T13:03:34.241081" elapsed="2.134696"/>
+</kw>
+<kw name="Wait Until Element is located in the login page" owner="shopPage">
+<kw name="Wait until element passed is located on page" owner="Generic">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${page_locator}</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-04T13:03:36.377772" elapsed="3.937923"/>
+</kw>
+<arg>${Shop_page_load}</arg>
+<status status="PASS" start="2024-06-04T13:03:36.376774" elapsed="3.939930"/>
+</kw>
+<status status="PASS" start="2024-06-04T13:03:36.375777" elapsed="3.940927"/>
+</kw>
+<kw name="Verify card titles in the home page" owner="shopPage">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-06-04T13:03:40.318687" level="INFO">@{expectedListOfMobiles} = [ iphone X | Samsung Note 8 | Nokia Edge | Blackberry ]</msg>
+<var>@{expectedListOfMobiles}</var>
+<arg>iphone X</arg>
+<arg>Samsung Note 8</arg>
+<arg>Nokia Edge</arg>
+<arg>Blackberry</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-06-04T13:03:40.318687" elapsed="0.000000"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-06-04T13:03:40.332650" level="INFO">@{elements} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="ca86cbf6bfb1154dc4017916b2eddb9d", element="f.AAE2B6F116FDABF2DA47C55CBC293B97.d.CD6BB18C344867306FC112B1DAD1E278.e.50")&gt; | &lt;selenium.webdr...</msg>
+<var>@{elements}</var>
+<arg>xpath://h4[@class='card-title']</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-06-04T13:03:40.318687" elapsed="0.013963"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-06-04T13:03:40.333646" level="INFO">@{actualListOfMobiles} = [ ]</msg>
+<var>@{actualListOfMobiles}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-06-04T13:03:40.333646" elapsed="0.000000"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-04T13:03:40.352598" level="INFO">iphone X</msg>
+<arg>${mobile1.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-04T13:03:40.334644" elapsed="0.017954"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actualListOfMobiles}</arg>
+<arg>${mobile1.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-06-04T13:03:40.352598" elapsed="0.010969"/>
+</kw>
+<var name="${mobile1}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca86cbf6bfb1154dc4017916b2eddb9d", element="f.AAE2B6F116FDABF2DA47C55CBC293B97.d.CD6BB18C344867306FC112B1DAD1E278.e.50")&gt;</var>
+<status status="PASS" start="2024-06-04T13:03:40.333646" elapsed="0.029921"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-04T13:03:40.375534" level="INFO">Samsung Note 8</msg>
+<arg>${mobile1.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-04T13:03:40.364569" elapsed="0.010965"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actualListOfMobiles}</arg>
+<arg>${mobile1.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-06-04T13:03:40.375534" elapsed="0.010972"/>
+</kw>
+<var name="${mobile1}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca86cbf6bfb1154dc4017916b2eddb9d", element="f.AAE2B6F116FDABF2DA47C55CBC293B97.d.CD6BB18C344867306FC112B1DAD1E278.e.51")&gt;</var>
+<status status="PASS" start="2024-06-04T13:03:40.363567" elapsed="0.023936"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-04T13:03:40.396479" level="INFO">Nokia Edge</msg>
+<arg>${mobile1.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-04T13:03:40.387503" elapsed="0.008976"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actualListOfMobiles}</arg>
+<arg>${mobile1.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-06-04T13:03:40.396479" elapsed="0.011968"/>
+</kw>
+<var name="${mobile1}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca86cbf6bfb1154dc4017916b2eddb9d", element="f.AAE2B6F116FDABF2DA47C55CBC293B97.d.CD6BB18C344867306FC112B1DAD1E278.e.52")&gt;</var>
+<status status="PASS" start="2024-06-04T13:03:40.387503" elapsed="0.020944"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-06-04T13:03:40.420415" level="INFO">Blackberry</msg>
+<arg>${mobile1.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-06-04T13:03:40.408447" elapsed="0.011968"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${actualListOfMobiles}</arg>
+<arg>${mobile1.text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-06-04T13:03:40.421413" elapsed="0.013962"/>
+</kw>
+<var name="${mobile1}">&lt;selenium.webdriver.remote.webelement.WebElement (session="ca86cbf6bfb1154dc4017916b2eddb9d", element="f.AAE2B6F116FDABF2DA47C55CBC293B97.d.CD6BB18C344867306FC112B1DAD1E278.e.53")&gt;</var>
+<status status="PASS" start="2024-06-04T13:03:40.408447" elapsed="0.027926"/>
+</iter>
+<var>${mobile1}</var>
+<value>@{elements}</value>
+<status status="PASS" start="2024-06-04T13:03:40.333646" elapsed="0.102727"/>
+</for>
+<kw name="Lists Should Be Equal" owner="Collections">
+<msg time="2024-06-04T13:03:40.437369" level="INFO">False</msg>
+<arg>${expectedListOfMobiles}</arg>
+<arg>${actualListOfMobiles}</arg>
+<doc>Fails if given lists are unequal.</doc>
+<status status="PASS" start="2024-06-04T13:03:40.436373" elapsed="0.000996"/>
+</kw>
+<status status="PASS" start="2024-06-04T13:03:40.317691" elapsed="0.119678"/>
+</kw>
+<kw name="Add Items To Cart And Checkout">
+<msg time="2024-06-04T13:03:40.442355" level="FAIL">No keyword with name 'Add Items To Cart And Checkout' found.</msg>
+<arg>@{listofProducts}</arg>
+<status status="FAIL" start="2024-06-04T13:03:40.442355" elapsed="0.000000">No keyword with name 'Add Items To Cart And Checkout' found.</status>
+</kw>
+<kw name="Verify items in the checkout page and proceed" owner="checkoutPage">
+<status status="NOT RUN" start="2024-06-04T13:03:40.443353" elapsed="0.000000"/>
+</kw>
+<kw name="Enter the country name and select the terms" owner="confirmationPage">
+<arg>${country_name}</arg>
+<status status="NOT RUN" start="2024-06-04T13:03:40.443353" elapsed="0.000000"/>
+</kw>
+<kw name="Purchase the product and confirm the purchase" owner="confirmationPage">
+<status status="NOT RUN" start="2024-06-04T13:03:40.443353" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-06-04T13:03:26.852554" elapsed="13.591796">No keyword with name 'Add Items To Cart And Checkout' found.</status>
+</test>
+<doc>Login to eCommerce website</doc>
+<status status="FAIL" start="2024-06-04T13:03:26.414575" elapsed="14.054708"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="shopPage">shopPage</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-06-04T13:03:26.807677" level="ERROR">Error in file 'C:\Users\lenovo\PycharmProjects\eCommerceWebAutomation\test\shopPage.robot' on line 5: Importing library 'C:\Users\lenovo\PycharmProjects\eCommerceWebAutomation\CustomLibraries\Shop.py' failed: TypeError: Library() takes no arguments
+Traceback (most recent call last):
+  File "C:\Users\lenovo\PycharmProjects\eCommerceWebAutomation\CustomLibraries\Shop.py", line 6, in &lt;module&gt;
+    @Library
+     ^^^^^^^
+PYTHONPATH:
+  C:\Users\lenovo\PycharmProjects\eCommerceWebAutomation\CustomLibraries
+  C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Scripts\robot.exe
+  C:\Users\lenovo\AppData\Local\Programs\Python\Python312\python312.zip
+  C:\Users\lenovo\AppData\Local\Programs\Python\Python312\DLLs
+  C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib
+  C:\Users\lenovo\AppData\Local\Programs\Python\Python312
+  C:\Users\lenovo\AppData\Roaming\Python\Python312\site-packages
+  C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages</msg>
+</errors>
+</robot>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-06-04T13:03:26.404601" rpa="false" schemaversion="5">
+<suite id="s1" name="shopPage" source="C:\Users\lenovo\PycharmProjects\eCommerceWebAutomation\test\shopPage.robot">
+<test id="s1-t1" name="Select the form and navigated to child window" line="36">
+<kw name="Open the browser with payment url" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-04T13:03:26.853551" level="INFO">Opening browser 'chrome' to base url 'https://rahulshettyacademy.com/loginpagePractise/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-04T13:03:26.853551" elapsed="6.540795"/>
+</kw>
+<status status="PASS" start="2024-06-04T13:03:26.852554" elapsed="6.541792"/>
+</kw>
+<kw name="Fill the login details and select user option" owner="landingPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-04T13:03:33.401329" level="INFO">Typing text 'rahulshettyacademy' into text field 'id:username'.</msg>
+<arg>${username_locator}</arg>
+<arg>${valid_username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-04T13:03:33.400337" elapsed="1.239685"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-06-04T13:03:34.641012" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2024-06-04T13:03:34.710825" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${password_locator}</arg>
+<arg>${valid_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-04T13:03:34.641012" elapsed="0.201460"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-04T13:03:34.842472" level="INFO">Clicking element 'css:input[value='user']'.</msg>
+<arg>${user_radioButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-04T13:03:34.842472" elapsed="0.397040"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.modal-body</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-04T13:03:35.239512" elapsed="0.334409"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-04T13:03:35.574922" level="INFO">Clicking element 'id:okayBtn'.</msg>
+<arg>${okay_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-04T13:03:35.574922" elapsed="0.280247"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-06-04T13:03:35.856167" level="INFO">Selecting options from selection list 'css:select.form-control' by value teach.</msg>
+<arg>${dropdown_teach}</arg>
+<arg>teach</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-06-04T13:03:35.855169" elapsed="0.162569"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${select_terms}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-04T13:03:36.017738" elapsed="0.114690"/>
+</kw>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2024-06-04T13:03:36.134429" level="INFO">Selecting checkbox 'id:terms'.</msg>
+<arg>${select_terms}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-04T13:03:36.132428" elapsed="0.143615"/>
+</kw>
+<kw name="Checkbox Should Be Selected" owner="SeleniumLibrary">
+<msg time="2024-06-04T13:03:36.277041" level="INFO">Verifying checkbox 'id:terms' is selected.</msg>
+<arg>${select_terms}</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<status status="PASS" start="2024-06-04T13:03:36.276043" elapsed="0.099734"/>
+</kw>
+<status status="PASS" start="2024-06-04T13:03:33.395344" elapsed="2.980433"/>
+</kw>
+<status status="PASS" start="2024-06-04T13:03:26.851557" elapsed="9.524220"/>
+</test>
+<doc>Login to eCommerce website</doc>
+<status status="PASS" start="2024-06-04T13:03:26.432528" elapsed="9.944246"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="shopPage">shopPage</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-06-04T13:03:26.804685" level="ERROR">Error in file 'C:\Users\lenovo\PycharmProjects\eCommerceWebAutomation\test\shopPage.robot' on line 5: Importing library 'C:\Users\lenovo\PycharmProjects\eCommerceWebAutomation\CustomLibraries\Shop.py' failed: TypeError: Library() takes no arguments
+Traceback (most recent call last):
+  File "C:\Users\lenovo\PycharmProjects\eCommerceWebAutomation\CustomLibraries\Shop.py", line 6, in &lt;module&gt;
+    @Library
+     ^^^^^^^
+PYTHONPATH:
+  C:\Users\lenovo\PycharmProjects\eCommerceWebAutomation\CustomLibraries
+  C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Scripts\robot.exe
+  C:\Users\lenovo\AppData\Local\Programs\Python\Python312\python312.zip
+  C:\Users\lenovo\AppData\Local\Programs\Python\Python312\DLLs
+  C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib
+  C:\Users\lenovo\AppData\Local\Programs\Python\Python312
+  C:\Users\lenovo\AppData\Roaming\Python\Python312\site-packages
+  C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages</msg>
+</errors>
+</robot>

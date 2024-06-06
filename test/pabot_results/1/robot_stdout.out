@@ -1,0 +1,20 @@
+==============================================================================
+shopPage :: Login to eCommerce website                                        
+==============================================================================
+Validate card display in the shopping page                              
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\lenovo\PycharmProjects\eCommerceWebAutomation\test\shopPage.robot:26
+    T:  Validate card display in the shopping page    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\lenovo\PycharmProjects\eCommerceWebAutomation\test\shopPage.robot:31
+      Add Items To Cart And Checkout    @{listofProducts}
+      |  @{listofProducts} = ['Blackberry', 'Nokia Edge'] (list)
+______________________________________________________________________________
+| FAIL |
+No keyword with name 'Add Items To Cart And Checkout' found.
+------------------------------------------------------------------------------
+shopPage :: Login to eCommerce website                                | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\lenovo\PycharmProjects\eCommerceWebAutomation\test\pabot_results\1\output.xml

@@ -1,0 +1,4 @@
+*** Test Cases ***;${username};${password}
+InvalidUsername;abc;learning
+InvalidPassword;rahulshetty;1234
+SpecialCharacters;%¤&!;learning

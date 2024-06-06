@@ -1,0 +1,9 @@
+==============================================================================
+shopPage :: Login to eCommerce website                                        
+==============================================================================
+Select the form and navigated to child window                         | PASS |
+------------------------------------------------------------------------------
+shopPage :: Login to eCommerce website                                | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  C:\Users\lenovo\PycharmProjects\eCommerceWebAutomation\test\pabot_results\2\output.xml

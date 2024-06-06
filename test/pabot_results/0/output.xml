@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-06-04T13:03:26.429536" rpa="false" schemaversion="5">
+<suite id="s1" name="shopPage" source="C:\Users\lenovo\PycharmProjects\eCommerceWebAutomation\test\shopPage.robot">
+<test id="s1-t1" name="Validate UnSuccessful Login" line="21">
+<kw name="Open the browser with payment url" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-04T13:03:26.859536" level="INFO">Opening browser 'chrome' to base url 'https://rahulshettyacademy.com/loginpagePractise/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-04T13:03:26.858553" elapsed="7.586984"/>
+</kw>
+<status status="PASS" start="2024-06-04T13:03:26.856544" elapsed="7.588993"/>
+</kw>
+<kw name="Fill the login form" owner="landingPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-04T13:03:34.449525" level="INFO">Typing text 'rahulshettyacademy' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-04T13:03:34.448527" elapsed="0.459342"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-06-04T13:03:34.908866" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2024-06-04T13:03:35.009124" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-04T13:03:34.907869" elapsed="0.271800"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-04T13:03:35.180666" level="INFO">Clicking button 'id:signInBtn'.</msg>
+<arg>${sign_in_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-04T13:03:35.179669" elapsed="0.182160"/>
+</kw>
+<arg>${valid_username}</arg>
+<arg>${invalid_password}</arg>
+<status status="PASS" start="2024-06-04T13:03:34.446533" elapsed="0.915296"/>
+</kw>
+<kw name="Wait Until Element is located in the login page" owner="landingPage">
+<kw name="Wait until element passed is located on page" owner="Generic">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${page_locator}</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-04T13:03:35.366334" elapsed="2.194869"/>
+</kw>
+<arg>${error_message}</arg>
+<status status="PASS" start="2024-06-04T13:03:35.363824" elapsed="2.197379"/>
+</kw>
+<status status="PASS" start="2024-06-04T13:03:35.362825" elapsed="2.198378"/>
+</kw>
+<kw name="Verify error message is correct" owner="landingPage">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-06-04T13:03:37.604089" level="INFO">${result} = Incorrect username/password.</msg>
+<var>${result}</var>
+<arg>${error_message}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-04T13:03:37.562201" elapsed="0.041888"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>Incorrect username/password.</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-06-04T13:03:37.605086" elapsed="0.000000"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-06-04T13:03:37.606083" level="INFO">Verifying element 'css:.alert-danger' contains exact text 'Incorrect username/password.'.</msg>
+<arg>${error_message}</arg>
+<arg>Incorrect username/password.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-06-04T13:03:37.605086" elapsed="0.023936"/>
+</kw>
+<status status="PASS" start="2024-06-04T13:03:37.562201" elapsed="0.066821"/>
+</kw>
+<status status="PASS" start="2024-06-04T13:03:26.855547" elapsed="10.773475"/>
+</test>
+<doc>Login to eCommerce website</doc>
+<status status="PASS" start="2024-06-04T13:03:26.452474" elapsed="11.179548"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="shopPage">shopPage</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-06-04T13:03:26.802690" level="ERROR">Error in file 'C:\Users\lenovo\PycharmProjects\eCommerceWebAutomation\test\shopPage.robot' on line 5: Importing library 'C:\Users\lenovo\PycharmProjects\eCommerceWebAutomation\CustomLibraries\Shop.py' failed: TypeError: Library() takes no arguments
+Traceback (most recent call last):
+  File "C:\Users\lenovo\PycharmProjects\eCommerceWebAutomation\CustomLibraries\Shop.py", line 6, in &lt;module&gt;
+    @Library
+     ^^^^^^^
+PYTHONPATH:
+  C:\Users\lenovo\PycharmProjects\eCommerceWebAutomation\CustomLibraries
+  C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Scripts\robot.exe
+  C:\Users\lenovo\AppData\Local\Programs\Python\Python312\python312.zip
+  C:\Users\lenovo\AppData\Local\Programs\Python\Python312\DLLs
+  C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib
+  C:\Users\lenovo\AppData\Local\Programs\Python\Python312
+  C:\Users\lenovo\AppData\Roaming\Python\Python312\site-packages
+  C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages</msg>
+</errors>
+</robot>

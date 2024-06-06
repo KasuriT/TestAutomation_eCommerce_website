@@ -1,0 +1,14 @@
+[ ERROR ] Error in file 'C:\Users\lenovo\PycharmProjects\eCommerceWebAutomation\test\shopPage.robot' on line 5: Importing library 'C:\Users\lenovo\PycharmProjects\eCommerceWebAutomation\CustomLibraries\Shop.py' failed: TypeError: Library() takes no arguments
+Traceback (most recent call last):
+  File "C:\Users\lenovo\PycharmProjects\eCommerceWebAutomation\CustomLibraries\Shop.py", line 6, in <module>
+    @Library
+     ^^^^^^^
+PYTHONPATH:
+  C:\Users\lenovo\PycharmProjects\eCommerceWebAutomation\CustomLibraries
+  C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Scripts\robot.exe
+  C:\Users\lenovo\AppData\Local\Programs\Python\Python312\python312.zip
+  C:\Users\lenovo\AppData\Local\Programs\Python\Python312\DLLs
+  C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib
+  C:\Users\lenovo\AppData\Local\Programs\Python\Python312
+  C:\Users\lenovo\AppData\Roaming\Python\Python312\site-packages
+  C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages
